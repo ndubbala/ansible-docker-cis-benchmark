@@ -1,0 +1,19 @@
+---
+# Host Configuration
+
+#check_1.1  - Ensure a separate partition for containers has been created
+- import_tasks: "{{ role_path }}/tasks/sections/1/1.yml"
+  when: "'1.1' not in cis_docker_benchmark_exclusions"
+
+#check_1.2  - Ensure the container host has been Hardened
+#check_1.3  - Ensure Docker is up to date
+#check_1.4  - Ensure only trusted users are allowed to control Docker daemon
+#check_1.5  - Ensure auditing is configured for the Docker daemon
+#check_1.6  - Ensure auditing is configured for Docker files and directories - /var/lib/docker
+#check_1.7  - Ensure auditing is configured for Docker files and directories - /etc/docker
+#check_1.8  - Ensure auditing is configured for Docker files and directories - docker.service
+#check_1.9  - Ensure auditing is configured for Docker files and directories - docker.socket
+#check_1.10 - Ensure auditing is configured for Docker files and directories - /etc/default/docker
+#check_1.11 - Ensure auditing is configured for Docker files and directories - /etc/docker/daemon.json
+#check_1.12 - Ensure auditing is configured for Docker files and directories - /usr/bin/docker-containerd
+#check_1.13 - Ensure auditing is configured for Docker files and directories - /usr/bin/docker-runc

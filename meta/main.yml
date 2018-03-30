@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Joseph Barnett
+  description: Ansible role to run CIS Docker Benchmark
+  company: Cisco
+  license: MIT
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: Ubuntu
+    versions:
+      - trusty
+
+  galaxy_tags:
+    - system
+    - docker
+    - security
+    - cis
+    - hardening
+
+dependencies: []

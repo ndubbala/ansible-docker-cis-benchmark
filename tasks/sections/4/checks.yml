@@ -1,0 +1,16 @@
+---
+- name: Dummy Task
+  command: echo "dummy task"
+
+#check_4 - Container Images and Build File
+#check_4.1  - Ensure a user for the container has been created
+#check_4.2  - Ensure that containers use trusted base images
+#check_4.3  - Ensure unnecessary packages are not installed in the container
+#check_4.4  - Ensure images are scanned and rebuilt to include security patches
+#check_4.5  - Ensure Content trust for Docker is Enabled
+#check_4.6  - Ensure HEALTHCHECK instructions have been added to the container image
+#check_4.7  - Ensure update instructions are not use alone in the Dockerfile
+#check_4.8  - Ensure setuid and setgid permissions are removed in the images
+#check_4.9  - Ensure COPY is used instead of ADD in Dockerfile
+#check_4.10 - Ensure secrets are not stored in Dockerfiles
+#check_4.11 - Ensure verified packages are only Installed

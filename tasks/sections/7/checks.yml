@@ -1,0 +1,13 @@
+---
+- name: Dummy Task
+  command: echo "dummy task"
+#check_7 - Docker Swarm Configuration
+#check_7.1  - Ensure swarm mode is not Enabled, if not needed
+#check_7.2  - Ensure the minimum number of manager nodes have been created in a swarm (Swarm mode not enabled)
+#check_7.3  - Ensure swarm services are binded to a specific host interface (Swarm mode not enabled)
+#check_7.5  - Ensure Docker's secret management commands are used for managing secrets in a Swarm cluster (Swarm mode not enabled)
+#check_7.6  - Ensure swarm manager is run in auto-lock mode (Swarm mode not enabled)
+#check_7.7  - Ensure swarm manager auto-lock key is rotated periodically (Swarm mode not enabled)
+#check_7.8  - Ensure node certificates are rotated as appropriate (Swarm mode not enabled)
+#check_7.9  - Ensure CA certificates are rotated as appropriate (Swarm mode not enabled)
+#check_7.10 - Ensure management plane traffic has been separated from data plane traffic (Swarm mode not enabled)

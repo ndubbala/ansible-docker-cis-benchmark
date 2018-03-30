@@ -1,0 +1,25 @@
+---
+- name: Dummy Task
+  command: echo "dummy task"
+
+#check_3 - Docker daemon configuration files
+#check_3.1  - Ensure that docker.service file ownership is set to root:root
+#check_3.2  - Ensure that docker.service file permissions are set to 644 or more restrictive
+#check_3.3  - Ensure that docker.socket file ownership is set to root:root
+#check_3.4  - Ensure that docker.socket file permissions are set to 644 or more restrictive
+#check_3.5  - Ensure that /etc/docker directory ownership is set to root:root
+#check_3.6  - Ensure that /etc/docker directory permissions are set to 755 or more restrictive
+#check_3.7  - Ensure that registry certificate file ownership is set to root:root
+#check_3.8  - Ensure that registry certificate file permissions are set to 444 or more restrictive
+#check_3.9  - Ensure that TLS CA certificate file ownership is set to root:root
+#check_3.10 - Ensure that TLS CA certificate file permissions are set to 444 or more restrictive
+#check_3.11 - Ensure that Docker server certificate file ownership is set to root:root
+#check_3.12 - Ensure that Docker server certificate file permissions are set to 444 or more restrictive
+#check_3.13 - Ensure that Docker server certificate key file ownership is set to root:root
+#check_3.14 - Ensure that Docker server certificate key file permissions are set to 400
+#check_3.15 - Ensure that Docker socket file ownership is set to root:docker
+#check_3.16 - Ensure that Docker socket file permissions are set to 660 or more restrictive
+#check_3.17 - Ensure that daemon.json file ownership is set to root:root
+#check_3.18 - Ensure that daemon.json file permissions are set to 644 or more restrictive
+#check_3.19 - Ensure that /etc/default/docker file ownership is set to root:root
+#check_3.20 - Ensure that /etc/default/docker file permissions are set to 644 or more restrictive

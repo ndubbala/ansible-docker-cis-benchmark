@@ -1,0 +1,22 @@
+---
+- name: Download Benchmark
+  git:
+    repo: 'https://github.com/docker/docker-bench-security.git'
+    version: HEAD
+    dest: /benchmark/
+    update: no
+  tags:
+    - skip_ansible_lint
+
+- import_tasks: "{{ role_path }}/tasks/sections/1/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/2/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/3/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/4/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/5/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/6/checks.yml"
+#- import_tasks: "{{ role_path }}/tasks/sections/7/checks.yml"
+
+- name: Remove security benchmark
+  file:
+    state: absent
+    path: "/benchmark"
