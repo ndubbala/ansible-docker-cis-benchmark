@@ -1,5 +1,0 @@
----
-# Docker Runtime
-#
-- name: Dummy Task
-  command: echo "dummy task"

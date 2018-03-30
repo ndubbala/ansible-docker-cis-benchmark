@@ -1,6 +1,0 @@
----
-- name: Dummy Task
-  command: echo "dummy task"
-#check_6 - Docker Security Operations
-#check_6.1  - Avoid image sprawl
-#check_6.2  - Avoid container sprawl

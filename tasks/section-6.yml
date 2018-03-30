@@ -1,0 +1,11 @@
+---
+- name: 6 - Docker Security Operations
+  shell: ./run_check.sh "{{ item }}"
+  args:
+    chdir: /benchmark/
+    executable: /bin/bash
+  register: check_pass
+  failed_when: check_pass.rc != 0
+  with_items:
+    - check_6_1
+    - check_6_2

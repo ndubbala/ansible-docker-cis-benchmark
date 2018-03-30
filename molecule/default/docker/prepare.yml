@@ -14,9 +14,6 @@
         - curl
         - software-properties-common
         - python
-        - sudo
-        - bash
-        - ca-certificates
         - git
 
     - name: apt repo
@@ -26,7 +23,7 @@
 
     - name: Add apt key
       become: yes
-      shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
       args:
           warn: false
 

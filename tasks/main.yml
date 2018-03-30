@@ -8,13 +8,34 @@
   tags:
     - skip_ansible_lint
 
-- import_tasks: "{{ role_path }}/tasks/sections/1/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/2/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/3/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/4/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/5/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/6/checks.yml"
-#- import_tasks: "{{ role_path }}/tasks/sections/7/checks.yml"
+- name: Copy test runner script to host
+  copy:
+    src: run_check.sh
+    dest: /benchmark/
+    owner: root
+    group: root
+    mode: 0700
+
+- import_tasks: "{{ role_path }}/tasks/section-1.yml"
+#  when: level_1_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-2.yml"
+#  when: level_1_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-3.yml"
+  when: level_3_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-4.yml"
+  when: level_4_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-5.yml"
+  when: level_5_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-6.yml"
+  when: level_6_checks is defined
+
+- import_tasks: "{{ role_path }}/tasks/section-7.yml"
+  when: level_7_checks is defined
 
 - name: Remove security benchmark
   file:
